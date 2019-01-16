@@ -41,9 +41,9 @@ CREATE TABLE IF NOT EXISTS servicesAvailable (
 
 CREATE TABLE IF NOT EXISTS collections(
    id SERIAL PRIMARY KEY,
-   branch_id VARCHAR(255) NOT NULL,
-   services_id VARCHAR(255) NOT NULL,
-   collections_id VARCHAR(50) NOT NULL,
+   branch_id INT NOT NULL,
+   services_id INT NOT NULL,
+   collections_id INT NOT NULL,
    collections_amount FLOAT NOT NULL,
    service_date  VARCHAR(50) NOT NULL,
    created_at  TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
