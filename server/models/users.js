@@ -92,4 +92,14 @@ export default class User {
     const sql = 'UPDATE users SET user_status=${approve} WHERE id=${id} RETURNING *';
     return this.db.one(sql, values);
   }
+  /**
+  * Method for modifying user password.
+  * @param {number} id - the id user.
+  */
+
+ modifyPassword(values, id) {
+  values.id = id;
+  const sql = 'UPDATE users SET password=${newPassword} WHERE id=${id} RETURNING *';
+  return this.db.one(sql, values);
+}
 }
