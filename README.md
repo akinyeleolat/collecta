@@ -1,2 +1,3 @@
+# Collecta
+Fund Managment and Collection
 # collecta
-Fund Collection Management
